@@ -5,9 +5,9 @@
 3. The scoreboard will track the cycle-by-cycle progress of the following three types of functional units. All subclasses of a base class called Unit.  
 4. When instantiating one of these units, you should provide a latency and a name for debugging purposes.  
  Here are the three types:
- 1. Pipelined:  Fully pipelined with N pipeline stages, which can have up to N instructions in different phases of execution.  		Example:  4-stage pipelined multiplier unit.
- 2. NonPipelined:  Non-pipelined, where only one instruction can execute at a time and requires N cycles to complete.      	    Example:  Divider unit.
- 3. PipelinedVariable:  Pipelined with uncertain delay.  A minimum delay of N cycles is specified, and N instructions can be in flight, but the pipeline may experience unexpected stalls. A unit of this type will report an unknown completion time until M cycles before completion.  Example:  Load unit.
+ -- Pipelined:  Fully pipelined with N pipeline stages, which can have up to N instructions in different phases of execution.  		Example:  4-stage pipelined multiplier unit.
+ -- NonPipelined:  Non-pipelined, where only one instruction can execute at a time and requires N cycles to complete.      	    Example:  Divider unit.
+ -- PipelinedVariable:  Pipelined with uncertain delay.  A minimum delay of N cycles is specified, and N instructions can be in flight, but the pipeline may experience unexpected stalls. A unit of this type will report an unknown completion time until M cycles before completion.  Example:  Load unit.
 
 5. An instruction tracked by the scoreboard will be identified by its destination register number, so it cannot contain more than one instruction at a time with that same destination.
 
